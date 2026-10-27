@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Mahasiswa",
+  "editor": "wokwi",
+  "parts": [
+    {"type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {}},
+    {"type": "wokwi-buzzer", "id": "bz1", "top": -100, "left": 120, "attrs": {}},
+    {"type": "wokwi-resistor", "id": "r1", "top": -45, "left": 190, "rotate": 90, "attrs": {"value": "220"}},
+    {"type": "wokwi-resistor", "id": "r2", "top": -45, "left": 250, "rotate": 90, "attrs": {"value": "220"}},
+    {"type": "wokwi-resistor", "id": "r3", "top": -45, "left": 310, "rotate": 90, "attrs": {"value": "220"}},
+    {"type": "wokwi-led", "id": "ledG", "top": -110, "left": 215, "attrs": {"color": "green"}},
+    {"type": "wokwi-led", "id": "ledY", "top": -110, "left": 275, "attrs": {"color": "yellow"}},
+    {"type": "wokwi-led", "id": "ledR", "top": -110, "left": 335, "attrs": {"color": "red"}}
+  ],
+  "connections": [
+    ["uno:7", "bz1:2", "blue", ["v0"]],
+    ["bz1:1", "uno:GND.1", "black", ["v0"]],
+    ["uno:8", "r1:1", "green", ["v0"]],
+    ["r1:2", "ledG:A", "green", ["v0"]],
+    ["ledG:C", "uno:GND.1", "black", ["v0"]],
+    ["uno:9", "r2:1", "yellow", ["v0"]],
+    ["r2:2", "ledY:A", "yellow", ["v0"]],
+    ["ledY:C", "uno:GND.1", "black", ["v0"]],
+    ["uno:10", "r3:1", "red", ["v0"]],
+    ["r3:2", "ledR:A", "red", ["v0"]],
+    ["ledR:C", "uno:GND.1", "black", ["v0"]]
+  ],
+  "dependencies": {}
+}
